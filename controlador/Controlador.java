@@ -25,7 +25,7 @@ public class Controlador implements ActionListener
         this.venPrin = pVenPrin;
         this.biblioteca= pBiblio;
         this.venPrin.miPanelOperaciones.agregarOyentesBotones(this);
-        this.venPrin.miPanelResultados.mostrarResultado("App lista para usar... \nSe han creado los siguientes tipos de objetos: \nVentanaPrincipal\nEmpresaAutomotriz\nControlador");
+        this.venPrin.miPanelResultados.mostrarResultado("Funciona -_-");
     }
 
     @Override
@@ -43,6 +43,14 @@ public class Controlador implements ActionListener
         {
             venPrin.crearDialogoAgregarLibro();
             this.venPrin.miLibro.agregarOyenteBoton(this);
+        }
+        if(comando.equals("agregar1"))
+        {
+
+        }
+        if(comando.equals("agregar2"))
+        {
+            
         }
         if(comando.equals("salir"))
         {

@@ -53,7 +53,7 @@ public class DialogoAgregarAColeccion extends JDialog
 
         btAgregar = new JButton("Agregar");
         btAgregar.setBounds(70,140,260,25);
-        btAgregar.setActionCommand("vender");
+        btAgregar.setActionCommand("agregar1");
         this.add(btAgregar);
 
         //Caracteristicas de la ventana
