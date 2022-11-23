@@ -28,14 +28,13 @@ public class PanelEntradaDatos extends JPanel
         this.setBackground(Color.WHITE);
 
         //Crear y agregar etiqueta empleados
-        lbLibros = new JLabel("Empleados: ", JLabel.RIGHT);
+        lbLibros = new JLabel("Libros: ", JLabel.RIGHT);
         lbLibros.setBounds(0,90,100,20);
         this.add(lbLibros);
 
-        lbColeccion = new JLabel("Empleados: ", JLabel.RIGHT);
-        lbColeccion.setBounds(0,90,100,20);
+        lbColeccion = new JLabel("Colecciones: ", JLabel.RIGHT);
+        lbColeccion.setBounds(0,140,100,20);
         this.add(lbColeccion);
-
 
         //Crear y agregar combo lista Empleados
         cbLibros = new JComboBox();

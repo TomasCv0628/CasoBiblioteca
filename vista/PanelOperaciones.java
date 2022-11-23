@@ -12,10 +12,8 @@ public class PanelOperaciones extends JPanel
     //----------------------
     // Atributos
     //----------------------
-    private JButton btAgregarVendedor;
-    private JButton btVenderCarro;
-    private JButton btCalcularSueldo;
-    private JButton btLiquidarNomina;
+    private JButton btAgregarLibro;
+    private JButton btAgregarColeccion;
     private JButton btSalir;
 
     //----------------------
@@ -25,41 +23,24 @@ public class PanelOperaciones extends JPanel
     //Constructor
     public PanelOperaciones()
     {
-        //Definición del contenedor del panel
         this.setLayout(null);
         this.setBackground(Color.WHITE);
 
-        //Crear y agregar boton AgregarVendedor
-        btAgregarVendedor = new JButton("Agregar Vendedor");
-        btAgregarVendedor.setBounds(10,20,170,20);
-        btAgregarVendedor.setActionCommand("agregarVendedor");
-        this.add(btAgregarVendedor);
+        btAgregarLibro = new JButton("Agregar Libro");
+        btAgregarLibro.setBounds(105,20,170,20);
+        btAgregarLibro.setActionCommand("agregarLibro");
+        this.add(btAgregarLibro);
 
-        //Crear y agregar boton VenderCarro
-        btVenderCarro = new JButton("Vender Carro");
-        btVenderCarro.setBounds(10,50,170,20); 
-        btVenderCarro.setActionCommand("venderCarro");
-        this.add(btVenderCarro);
+        btAgregarColeccion = new JButton("Agregar a coleccion");
+        btAgregarColeccion.setBounds(100,50,180,20);
+        btAgregarColeccion.setActionCommand("AgregarColeccion");
+        this.add(btAgregarColeccion);
 
-        //Crear y agregar boton CalcularSueldo
-        btCalcularSueldo = new JButton("Calcular Sueldo");
-        btCalcularSueldo.setBounds(10,80,170,20);
-        btCalcularSueldo.setActionCommand("calcularSueldo");
-        this.add(btCalcularSueldo);
-
-        //Crear y agregar boton LiquidarNomina
-        btLiquidarNomina = new JButton("Liquidar Nómina");
-        btLiquidarNomina.setBounds(190,20,170,20); 
-        btLiquidarNomina.setActionCommand("liquidarNomina");
-        this.add(btLiquidarNomina);
-
-        //Crear y agregar boton Salir
         btSalir = new JButton("Salir");
-        btSalir.setBounds(190,50,170,20); 
+        btSalir.setBounds(105,80,170,20); 
         btSalir.setActionCommand("salir");
         this.add(btSalir);
 
-        //Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
         borde.setTitleColor(Color.BLUE);
         this.setBorder(borde);
@@ -67,10 +48,8 @@ public class PanelOperaciones extends JPanel
 
     public void agregarOyentesBotones(ActionListener pAL)
     {
-        btAgregarVendedor.addActionListener(pAL);
-        btVenderCarro.addActionListener(pAL);
-        btCalcularSueldo.addActionListener(pAL);
-        btLiquidarNomina.addActionListener(pAL);
+        btAgregarLibro.addActionListener(pAL);
+        btAgregarColeccion.addActionListener(pAL);
         btSalir.addActionListener(pAL);
     }
 

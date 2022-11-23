@@ -10,6 +10,8 @@ public class VentanaPrincipal extends JFrame
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultados;
+    public DialogoAgregarAColeccion miColeccion;
+    public DialogoAgregarLibro miLibro;
 
     
     //----------------------
@@ -45,5 +47,14 @@ public class VentanaPrincipal extends JFrame
         this.setResizable(false);
         this.setVisible(true);
     }
+    public void crearDialogoAgregarColeccion()
+    {
+        miColeccion = new DialogoAgregarAColeccion();
+    }
 
+    //Crear Dialogo VenderCarro
+    public void crearDialogoAgregarLibro()
+    {
+        miLibro = new DialogoAgregarLibro();
+    }
 }

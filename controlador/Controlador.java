@@ -1,6 +1,52 @@
 package CasoBiblioteca.controlador;
 
-public class Controlador 
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import CasoBiblioteca.modelo.Biblioteca;
+import CasoBiblioteca.vista.VentanaPrincipal;
+
+public class Controlador implements ActionListener
 {
-    
+    //------------------
+    //Atributos
+    //------------------
+    private VentanaPrincipal venPrin;
+    private Biblioteca biblioteca;
+
+    //------------------
+    //Metodos
+    //------------------
+
+    //Constructor
+    public Controlador(VentanaPrincipal pVenPrin, Biblioteca pBiblio)
+    {
+        this.venPrin = pVenPrin;
+        this.biblioteca= pBiblio;
+        this.venPrin.miPanelOperaciones.agregarOyentesBotones(this);
+        this.venPrin.miPanelResultados.mostrarResultado("App lista para usar... \nSe han creado los siguientes tipos de objetos: \nVentanaPrincipal\nEmpresaAutomotriz\nControlador");
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) 
+    {
+        String comando = ae.getActionCommand();
+
+        //Abrir ventana Agregar vendedor
+        if(comando.equals("AgregarColeccion"))
+        {
+            venPrin.crearDialogoAgregarColeccion();
+            this.venPrin.miColeccion.agregarOyenteBoton(this);
+        }
+        if(comando.equals("agregarLibro"))
+        {
+            venPrin.crearDialogoAgregarLibro();
+            this.venPrin.miLibro.agregarOyenteBoton(this);
+        }
+        if(comando.equals("salir"))
+        {
+            System.exit(0);
+        }  
+    }
 }
